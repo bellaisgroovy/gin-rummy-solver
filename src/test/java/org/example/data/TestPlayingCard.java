@@ -1,11 +1,10 @@
 package org.example.data;
 
 import org.junit.Test;
-import org.example.data.PlayingCard;
-import org.example.data.Suit;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-public class testPlayingCard {
+public class TestPlayingCard {
     @Test
     public void testConstructorValueTooHigh() {
         try {

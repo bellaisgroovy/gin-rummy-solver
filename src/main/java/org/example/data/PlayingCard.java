@@ -9,12 +9,7 @@ public class PlayingCard {
     public PlayingCard() {}
     public PlayingCard(Suit init_suit, int init_value) {
         this.suit = init_suit;
-        if (init_value >= min_card_value && init_value <= max_card_value) {
-            this.value = init_value;
-        }
-        else {
-            throw new IllegalArgumentException("PlayingCard.value out of range");
-        }
+        this.setValue(init_value);
     }
 
     public String toString() {
@@ -33,8 +28,13 @@ public class PlayingCard {
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
+    public void setValue(int newValue) {
+        if (newValue >= min_card_value && newValue <= max_card_value) {
+            this.value = newValue;
+        }
+        else {
+            throw new IllegalArgumentException("PlayingCard.value out of range");
+        }
     }
 
 }
